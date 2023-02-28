@@ -5,12 +5,12 @@
 
 <!-- 사용자 CSS 추가 -->
 <th:block layout:fragment="css">
-    <Style>
+    <style>
         .fieldError {
             color: #bd2130;
         }
 
-    </Style>
+    </style>
 </th:block>
 
 <!-- 사용자 스크립트 추가 -->
@@ -21,8 +21,7 @@
             if(errorMessage != null) {
                 alert(errorMessage);
             }
-        }
-
+        });
     </script>
 </th:block>
 
@@ -35,17 +34,17 @@
         </div>
         <div class="form-group">
             <label th:for="email">이메일주소</label>
-            <input type="email" th:field="*{email}" class="form-control" placeholder="을 입력해주세요.">
+            <input type="email" th:field="*{email}" class="form-control" placeholder="이메일을 입력해주세요.">
             <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="fieldError">Incorrect data</p>
         </div>
         <div class="form-group">
             <label th:for="password">비밀번호</label>
-            <input type="password" th:field="*{password}" class="form-control" placeholder="을 입력해주세요.">
+            <input type="password" th:field="*{password}" class="form-control" placeholder="비밀번호 입력">
             <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="fieldError">Incorrect data</p>
         </div>
         <div class="form-group">
             <label th:for="address">주소</label>
-            <input type="address" th:field="*{address}" class="form-control" placeholder="을 입력해주세요.">
+            <input type="text" th:field="*{address}" class="form-control" placeholder="주소를 입력해주세요.">
             <p th:if="${#fields.hasErrors('address')}" th:errors="*{address}" class="fieldError">Incorrect data</p>
         </div>
         <div style="text-align:center">
