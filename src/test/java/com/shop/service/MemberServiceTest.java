@@ -8,8 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.TestPropertySource;
-
-import javax.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -35,7 +34,7 @@ public class MemberServiceTest {
     }
 
     @Test
-    @DisplayName("회원가입테스트")
+    @DisplayName("회원가입 테스트")
     public void saveMemberTest() {
         Member member = createMember();
         Member savedMember = memberService.saveMember(member);
