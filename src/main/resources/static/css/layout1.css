@@ -1,5 +1,5 @@
 html {
-    position: realative;
+    position: relative;
     min-height: 100%;
     margin: 0;
 }
@@ -10,7 +10,7 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-    botton: 0;
+    bottom: 0;
     width: 100%;
     padding: 15px 0;
     text-align: center;
